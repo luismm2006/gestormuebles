@@ -29,3 +29,14 @@ export async function postProducto(producto) {
         return [];
     }
 }
+
+export async function getProductById(id){
+  try {
+      const res = await fetch(API_URL + "/" + id);
+      const data = await res.json();
+      return data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}

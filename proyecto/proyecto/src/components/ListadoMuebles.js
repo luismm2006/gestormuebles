@@ -9,10 +9,9 @@ export async function ListadoMuebles() {
     
       <img src="${p.imagen}" alt="${p.name}">
       <h3>${p.name}</h3>
-      <p>Cantidad: ${p.cantidad}</p>
       <p>Precio: ${p.precio} €</p>
-      <a href="#/detalleMueble" class="btn-detalle">Ver detalle</a>
-      <a href="#/borrarMueble" class="btn-detalle">Borrar</a>
+      <a href="#/detallemueble/${p.id}" class="btn-detalle">Ver detalle</a>
+      <a href="#/borrarmueble/${p.id}" class="btn-detalle">Borrar</a>
     </div>
   `).join("");
 

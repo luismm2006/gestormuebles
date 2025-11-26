@@ -4,6 +4,8 @@ import { Home } from './views/Home.js';
 import { AboutUs } from './views/AboutUs.js';
 import { NotFound } from './views/NotFound.js';
 import { initAgregarProducto } from './components/AgregarProducto.js'; 
+import { DetalleMueble } from './components/DetalleMueble.js';
+import { BorrarMueble } from './components/BorrarMueble.js';
 
 export async function router() {
     const view = document.getElementById('view');
@@ -20,6 +22,16 @@ export async function router() {
 
     if (route === '/agregarproducto') {
         initAgregarProducto();
+    }
+    if(route.startsWith('/detallemueble/')){
+        const id = route.split('/')[2];
+        view.innerHTML = await DetalleMueble(id);
+        return;
+    }
+    if(route.startsWith('/borrarmueble/')){
+        const id = route.split('/')[2];
+        view.innerHTML = await BorrarMueble(id);
+        return;
     }
 }
 

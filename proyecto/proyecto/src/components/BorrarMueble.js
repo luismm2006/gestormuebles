@@ -1,5 +1,5 @@
 import { getProductById } from "../services/api";
-export async function DetalleMueble(id) {
+export async function BorrarMueble(id) {
   const producto = await getProductById(id);
 
   return `
@@ -8,7 +8,7 @@ export async function DetalleMueble(id) {
       <img src="${producto.imagen}" alt="${producto.nombre}" />
       <p>Cantidad: ${producto.cantidad}</p>
       <p><strong>Precio: </strong> ${producto.precio} €</p>
-      <a href="#/listadomuebles" class="btn-volver">Volver</a>
+      
     </div>
   `;
 }
