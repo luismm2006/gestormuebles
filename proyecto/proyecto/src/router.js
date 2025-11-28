@@ -6,7 +6,6 @@ import { NotFound } from './views/NotFound.js';
 import { initAgregarProducto } from './components/AgregarProducto.js'; 
 import { DetalleMueble } from './components/DetalleMueble.js';
 import { BorrarMueble } from './components/BorrarMueble.js';
-import { activarFavoritos } from './components/ListadoMuebles.js';
 export async function router() {
     const view = document.getElementById('view');
     const route = location.hash.slice(1).toLowerCase() || '/';
@@ -19,10 +18,7 @@ export async function router() {
 
     const screen = routes[route] || NotFound;
     view.innerHTML = await screen();
-    if (route === '/listadomuebles') {
-        view.innerHTML = await ListadoMuebles();
-        activarFavoritos(); 
-    }
+    
     if (route === '/agregarproducto') {
         initAgregarProducto();
     }
