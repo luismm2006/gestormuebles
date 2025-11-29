@@ -8,7 +8,7 @@ export async function BorrarMueble(id) {
   return `
     <div class="detalle-mueble">
       <h2>${producto.name}</h2>
-      <img src="${producto.imagen}" alt="${producto.name}" />
+      <img src="${producto.image}" alt="${producto.name}" />
       <p>Cantidad: ${producto.cantidad}</p>
       <p><strong>Precio:</strong> ${producto.precio} €</p>
 

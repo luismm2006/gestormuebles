@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/productos';
+const API_URL = 'https://692aa1f97615a15ff24d30c0.mockapi.io/api/furniture';
 
 export async function getAllProductos() {
   try {

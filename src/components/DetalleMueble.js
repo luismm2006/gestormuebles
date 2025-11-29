@@ -6,7 +6,7 @@ export async function DetalleMueble(id) {
   return `
     <div class="detalle-mueble">
       <h2>${producto.name}</h2>
-      <img src="${producto.imagen}" alt="${producto.nombre}" />
+      <img src="${producto.image}" alt="${producto.nombre}" />
       <p>Cantidad: ${producto.cantidad}</p>
       <p><strong>Precio: </strong> ${producto.precio} €</p>
       <a href="#/listadomuebles" class="btn-volver">Volver</a>

@@ -15,7 +15,7 @@ export async function ListadoMuebles() {
 
   const itemsHtml = productosFiltrados.map(p => `
     <div class="producto" data-id="${p.id}">
-      <img src="${p.imagen}" alt="${p.name}">
+      <img src="${p.image}" alt="${p.name}">
       <h3>${p.name}</h3>
       <p>Precio: ${p.precio} €</p>
 
